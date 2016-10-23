@@ -1,5 +1,5 @@
 <?php
-  session_start();
+
   include 'header.php';
   if (isset($_SESSION['correct'])) {
   echo "<p>".$_SESSION['correct']."</p>";

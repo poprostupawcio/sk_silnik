@@ -12,7 +12,7 @@
     $query = "SELECT * FROM subpages";
     if ($result=mysqli_query($connect,$query)) {
       while ($row = mysqli_fetch_assoc($result)) {
-        echo "<p><a href='page.php?id_subpage=".$row['id_subpage']."'>-> ".$row['subpage_name']."</a></p></br>";
+        echo "<p><a href='page.php?id_subpage=".$row['id_subpage']."'>-> ".$row['subpage_name']."</a>|<a href='delete_subpage.php?id_subpage=".$row['id_subpage']."'>Usuń</a></p></br>";
     }
     }
   }

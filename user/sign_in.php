@@ -24,7 +24,19 @@ session_start();
     ?>
     <form method="POST" action="sign_in_core.php">
         <input type="text" name="login" placeholder="Login">
+        <?php
+        if (isset($_SESSION['login_not_exist'])) {
+          echo "<p>".$_SESSION['login_not_exist']."</p>";
+          unset($_SESSION['login_not_exist']);
+        }
+        ?>
         <input type="password" name="password" placeholder="Hasło">
+        <?php
+        if (isset($_SESSION['wrong_password'])) {
+          echo "<p>".$_SESSION['wrong_password']."</p>";
+          unset($_SESSION['wrong_password']);
+        }
+        ?>
         <input type="submit" name="send" value="Zaloguj">
     </form>
   </body>

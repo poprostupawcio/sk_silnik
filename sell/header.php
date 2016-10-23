@@ -7,10 +7,11 @@
   </head>
   <body>
     <ul>
-      <li><a href="page_list.php">Lista podstron</a></li>
-      <li><a href="add_subpage.php"> Dodaj podstronę</a> </li>
-      <li><a href="../add_content/add_content.php"> Dodaj treść do podstrony</a> </li>
-      <li><a href="../sell/add_sell.php"> Dodaj ofertę sprzedaz</a> </li>
+      <li><a href="../subpages/page_list.php">Lista podstron</a></li>
+      <li><a href="../subpages/add_subpage.php"> Dodaj podstronę</a> </li>
+      <li><a href="../add_content/add_content.php"> Dodaj treść do podstrony </a></li>
+      <li><a href="add_sell.php"> Dodaj ofertę sprzedaz</a> </li>
+      <li><a href="sell_list.php"> Lista ofert sprzedazy</a> </li>
     </ul>
     <?php
       session_start();

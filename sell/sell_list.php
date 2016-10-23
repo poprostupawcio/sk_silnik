@@ -19,7 +19,7 @@
     if ($result=mysqli_query($connect,"SELECT * FROM sell")) {
       while ($row=mysqli_fetch_assoc($result)) {
         echo "<div style='border:2px solid black; margin:15px 0;'>";
-        echo "<p style='font-weight:bold;text-align:center'>".$row['sell_title']."</p>";
+        echo "<p style='font-weight:bold;text-align:center'>".$row['sell_title']."|<a href='sell_page.php?id_sell=".$row['id_sell']."'>Sprawdź</a></p>";
         echo "<p><a href='edit_sell.php?id_sell=".$row['id_sell']."'>Edytuj</a>|<a href='delete_sell.php?id_sell=".$row['id_sell']."'>Usuń</a></p>";
         echo "<p>Adres: ".$row['sell_address']."</p>";
         echo "<p>Cena: ".$row['sell_price']."</p>";
@@ -30,6 +30,7 @@
             echo "<img src='".$row_img['sell_img_path']."'>";
         }
         echo "</div>" ;
+          $_SESSION['id_sell']=$row['id_sell'];
       }
     }
 

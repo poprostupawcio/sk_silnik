@@ -24,7 +24,9 @@ session_start();
           header('Location:registration.php');
           exit();
         } else {
-          mysqli_query($connect,"INSERT INTO users VALUE (NULL, '$login', '$password')");
+          $login=mysqli_real_escape_string($connect,$login);
+          $hashpassword = password_hash($password, PASSWORD_DEFAULT);
+          mysqli_query($connect,"INSERT INTO users VALUE (NULL, '$login', '$hashpassword')");
           echo "DODANO USERA";
         }
       }

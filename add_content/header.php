@@ -13,3 +13,9 @@
       <li><a href="../sell/add_sell.php"> Dodaj ofertę sprzedaz</a> </li>
       <li><a href="../sell/sell_list.php"> Lista ofert sprzedazy</a> </li>
     </ul>
+    <?php
+      session_start();
+      if (isset($_SESSION['sign_in'])) {
+        echo "<p style='color:green;border-bottom:1px dashed black'>Witaj".$_SESSION['user']."</p>";
+      }
+    ?>
