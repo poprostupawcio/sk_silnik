@@ -1,14 +1,8 @@
 <?php
-  session_start();
+  include 'header.php';
+
  ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sell list</title>
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
-  <body>
+
     <p style="font-size:40px;font-weight:bold; text-align:center;"> Lista ofert </p>
     <?php
     require_once "../connect.php";
